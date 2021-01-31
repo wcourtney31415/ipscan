@@ -19,12 +19,12 @@
 
 package org.savarese.rocksaw.net;
 
-import net.azib.ipscan.core.LibraryLoader;
-
 import java.io.IOException;
 import java.io.InterruptedIOException;
 import java.net.InetAddress;
 import java.net.SocketException;
+
+import net.azib.ipscan.core.LibraryLoader;
 
 /**
  * <p>The RawSocket class provides a strictly utilitarian API for

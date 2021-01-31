@@ -5,13 +5,10 @@
  */
 package net.azib.ipscan.core.net;
 
-import net.azib.ipscan.config.LoggerFactory;
-import net.azib.ipscan.core.ScanningSubject;
-import org.savarese.rocksaw.net.RawSocket;
-import org.savarese.vserv.tcpip.ICMPEchoPacket;
-import org.savarese.vserv.tcpip.ICMPPacket;
-import org.savarese.vserv.tcpip.IPPacket;
-import org.savarese.vserv.tcpip.OctetConverter;
+import static java.util.logging.Level.FINEST;
+import static java.util.logging.Level.SEVERE;
+import static java.util.logging.Level.WARNING;
+import static net.azib.ipscan.util.IOUtils.closeQuietly;
 
 import java.io.IOException;
 import java.io.InterruptedIOException;
@@ -21,8 +18,14 @@ import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.logging.Logger;
 
-import static java.util.logging.Level.*;
-import static net.azib.ipscan.util.IOUtils.closeQuietly;
+import org.savarese.rocksaw.net.RawSocket;
+import org.savarese.vserv.tcpip.ICMPEchoPacket;
+import org.savarese.vserv.tcpip.ICMPPacket;
+import org.savarese.vserv.tcpip.IPPacket;
+import org.savarese.vserv.tcpip.OctetConverter;
+
+import net.azib.ipscan.config.LoggerFactory;
+import net.azib.ipscan.core.ScanningSubject;
 
 /**
  * Shared multi-threaded pinger.
