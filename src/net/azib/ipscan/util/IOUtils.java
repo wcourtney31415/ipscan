@@ -1,11 +1,10 @@
 package net.azib.ipscan.util;
 
-import org.savarese.rocksaw.net.RawSocket;
-
 import java.io.Closeable;
 import java.io.IOException;
 import java.net.DatagramSocket;
 import java.net.Socket;
+import java.org.savarese.rocksaw.net.RawSocket;
 
 public class IOUtils {
   public static void closeQuietly(Socket socket) {
